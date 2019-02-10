@@ -1,0 +1,19 @@
+@import "grid";
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include device(tablet) {
+    flex-direction: column;
+  }
+
+  @include device(phone) {
+    flex-direction: column;
+  }
+}
+
+.position-relative {
+  position: relative;
+}

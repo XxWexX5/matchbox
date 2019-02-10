@@ -1,0 +1,45 @@
+@import "font-family";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// font-family
+$fonte-1: 'Montserrat', sans-serif;
+$fonte-2: 'Montserrat-Bold';
+
+// Função para converter PX - EM
+@function em($valor, $contexto: 16) {
+  $val: ($valor / $contexto) + em;
+  @return $val;
+}
+
+// tamanho da fonte
+@mixin tipo-1($tam) {
+  font-family: $fonte-1;
+  @if($tam == 18){
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+  @else if($tam == 30){
+    font-size: em(30);
+    line-height: em(42, 30);
+  }
+  @else if($tam == 12){
+    font-size: em(12);
+    line-height: em(24, 12);
+  }
+}
+
+@mixin tipo-2($tam) {
+  font-family: $fonte-2;
+  @if($tam == 18){
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+  @else if($tam == 30){
+    font-size: em(30);
+    line-height: em(42, 30);
+  }
+  @else if($tam == 12){
+    font-size: em(12);
+    line-height: em(24, 12);
+  }
+}

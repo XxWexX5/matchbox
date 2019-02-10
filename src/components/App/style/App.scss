@@ -1,0 +1,215 @@
+@import "../../utilities/reset";
+@import "../../utilities/fonte";
+@import "../../utilities/colors";
+@import "../../utilities/plus";
+
+body {
+  background-color: $color-background-page;
+}
+
+.app {
+  @include flex-center;
+  height: 100vh;
+
+  .ranking {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .content-ranking {
+    .ranking-header,
+    .ranking-body {
+      background-color: $color-background-component;
+      border-radius: 3px;
+    }
+
+    .ranking-header {
+      h2 {
+        color: $color-title;
+        @include tipo-1(30);
+        padding: 10px 0;
+        margin: 20px 0;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+
+    .ranking-body {
+
+      @include device(tablet) {
+        text-align: center;
+      }
+
+      @include device(phone) {
+        text-align: center;
+      }
+
+      .container {
+        @include flex-center;
+        padding: 20px;
+
+        &:first-child:hover {
+          -moz-border-radius-topleft: 3px;
+          border-top-left-radius: 3px;
+          -moz-border-radius-topright: 3px;
+          border-top-right-radius: 3px;
+        }
+
+        &:last-child:hover {
+          -moz-border-radius-bottomleft: 3px;
+          border-bottom-left-radius: 3px;
+          -moz-border-radius-bottomright: 3px;
+          border-bottom-right-radius: 3px;
+        }
+
+        &:hover {
+          background-color: #1cbcb4;
+
+          img {
+            border-color: #FFFFFF;
+          }
+
+          h3 {
+            color: #FFFFFF;
+          }
+
+          p {
+            color: #272727;
+          }
+
+          .index-rank {
+            background-color: #1cbcb4;
+            color: #FFFFFF;
+            border-color: #FFFFFF;
+          }
+
+          ul.table-like {
+            animation: .2s animation-table-like linear forwards;
+
+            @keyframes animation-table-like {
+              0% {
+                opacity: 0;
+                transform: translateX(30px);
+              }
+
+              100% {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            p.percentage {
+              color: #909090;
+            }
+          }
+        }
+      }
+
+      h3,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      h3 {
+        @include tipo-1(18);
+        font-weight: bold;
+        line-height: 10px;
+        color: $color-title;
+      }
+
+      p {
+        @include tipo-1(12);
+        color: $color-occupation;
+      }
+
+      img {
+        background-color: #e0e0e0;
+        border: 5px solid #6bbef1;
+        border-radius: 100%;
+        padding: 0 10px;
+
+        @include device(tablet) {
+          margin: 10px 0;
+        }
+
+        @include device(phone) {
+          margin: 20px 0;
+        }
+      }
+
+      .index-rank {
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        right: 13px;
+        bottom: 2px;
+        font-size: .8rem;
+        border: 1px solid #707070;
+        border-radius: 100%;
+        padding: 0px 6px;
+        color: #707070;
+        background-color: #FFFFFF;
+        font-weight: bold;
+
+        @include device(tablet) {
+          right: 10px;
+          bottom: 7px;
+        }
+
+        @include device(phone) {
+          right: 110px;
+          bottom: 7px;
+        }
+      }
+
+      ul.table-like {
+        display: inherit;
+        position: absolute;
+        right: -230px;
+        background-color: #FFF;
+        border-radius: 5px;
+        text-align: center;
+        opacity: 0;
+
+        @include device(phone) {
+          top: -18px;
+          right: -40px;
+        }
+
+        li:first-child {
+          border-right: 1px solid #8c8b8b;
+
+          p.title {
+            border-top-left-radius: 5px;
+          }
+        }
+
+        li:last-child {
+          p.title {
+            border-top-right-radius: 5px;
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          padding: 2px 15px;
+          text-transform: uppercase;
+          font-weight: bold;
+
+          &.title {
+            background-color: #df595d;
+            color: #FFFFFF;
+          }
+
+          &.percentage {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
