@@ -11,7 +11,7 @@ Teste  para vaga de front-end jr. na empresa: Matchbox.
 <ul>
     <li>Clone o repositório.</li>
     <li>Entre no diretório clonado.</li>
-    <li>Instale as Dependências do projeto com: (yarn ou npm install)</li>
+    <li>Instale as dependências do projeto com: (yarn ou npm install)</li>
     <li>Iniciar servidor local: ( yarn start ou npm run start )</li>
 </ul>
 <br />
