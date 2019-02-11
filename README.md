@@ -14,3 +14,7 @@ Teste  para vaga de front-end jr. na empresa: Matchbox.
     <li>Instale as Dependências do projeto com: (yarn ou npm install)</li>
     <li>Iniciar servidor local: ( yarn start ou npm run start )</li>
 </ul>
+<br />
+
+See you later! <br />
+Bye, (つ▀¯▀)つ
