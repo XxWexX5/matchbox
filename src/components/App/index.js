@@ -20,11 +20,9 @@ class App extends Component {
     loadPeoples = async () => {
         const response = await api;
 
-        this.setState({peoples: response.data.data});
-
-        console.log(this.state.peoples);
+        this.setState({peoples: response.data.data.sort((a, b) => b.positive - a.positive)});
     };
-
+    
     render() {
         return (
             <div className="app">
