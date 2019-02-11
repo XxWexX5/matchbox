@@ -7,7 +7,7 @@ Teste  para vaga de front-end jr. na empresa: Matchbox.
 
 <img src="https://i.ibb.co/TTPWmMG/esboco-component-react.jpg" alt="Esboço componente react." >
 
-<h2>Como vizualizar o projeto?<h2>
+<h2>Como vizualizar o projeto?</h2>
 <ul>
     <li>Clone o repositório.</li>
     <li>Entre no diretório clonado.</li>
